@@ -7,6 +7,9 @@ This project implements machine learning solutions for a structural mechanics pr
 - Several notebook-based experiments comparing different modeling approaches.
 
 ## Project Goal
+![Lattice beam geometry](Images/Lattice_Beam.png)
+
+*Figure: Geometry and boundary conditions of the lattice beam model used for feature extraction and stress analysis.*
 
 The goal is to learn mappings from structural input features to:
 
@@ -48,6 +51,28 @@ The project uses processed input files and trained model artifacts stored in the
 
 - data_info.txt
   - Information about the original dataset source and file structure.
+
+## Model Results
+
+### Classification Results
+
+These confusion matrices summarize classification model performance on the stress class prediction task:
+
+![Direct classification confusion matrix](Images/Direct_classification_Confusion_matrix.png)
+
+*Figure: Confusion matrix for the direct classification model, showing predicted vs actual stress severity classes.*
+
+![Indirect classification confusion matrix](Images/Indirect_classification_confusion_matrix.png)
+
+*Figure: Confusion matrix for the indirect classification model, showing how predicted classes compare to actual labels.*
+
+### Regression Results
+
+The regression results plot shows training progress and evaluation metrics for max stress prediction:
+
+![Regression training results](Images/Regression_training_results.png)
+
+*Figure: Regression training and validation performance for the max stress neural network model.*
 
 ## Dataset Notes
 
@@ -99,7 +124,3 @@ Running the notebooks will generate:
 - Training and validation performance plots
 - Classification reports and confusion matrices
 - Saved model files in the models/ directory
-
-## Notes
-
-The notebooks are intended as end-to-end examples for preprocessing, training, evaluation, and model persistence. They can be used as a starting point for further experimentation with architecture tuning, hyperparameter search, or additional feature engineering.
